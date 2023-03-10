@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Multi_thread_Visual
@@ -16,5 +10,46 @@ namespace Multi_thread_Visual
         {
             InitializeComponent();
         }
+        public void Op1()
+        {
+            for (int i = 4; i >= 0; i--)
+            {
+                lstThread1.Invoke((MethodInvoker)delegate
+                {
+                    ListViewItem item = new ListViewItem(i.ToString());
+                    lstThread1.Items.Add(item);
+                });
+                Thread.Sleep(1000);
+            }
+        }
+        public void Op2()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                LstThread2.Invoke((MethodInvoker)delegate
+                {
+                    ListViewItem item = new ListViewItem(i.ToString());
+                    LstThread2.Items.Add(item);
+                });
+
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            Thread Operation1 = new Thread(new ThreadStart(Op1));
+            Thread Operation2 = new Thread(new ThreadStart(Op2));
+            Operation1.Start();
+            Operation2.Start();
+        }
+
+        private void btnBacktoMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmMain fm = new frmMain();
+            fm.Show();
+        }
+
     }
 }
