@@ -64,8 +64,7 @@ namespace Multi_thread_Visual
         }
 
         private void btnBacktomenu_Click(object sender, EventArgs e)
-        {
-            
+        {           
             this.Close();
             frmMain fm = new frmMain();
             fm.Show();
