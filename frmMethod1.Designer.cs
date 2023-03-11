@@ -41,12 +41,14 @@ namespace Multi_thread_Visual
             // btnStart
             // 
             this.btnStart.AutoSize = true;
+            this.btnStart.BackColor = System.Drawing.Color.Honeydew;
+            this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.Location = new System.Drawing.Point(337, 127);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(117, 40);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start the thread";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // LstThread2
@@ -57,6 +59,7 @@ namespace Multi_thread_Visual
             this.LstThread2.Size = new System.Drawing.Size(258, 329);
             this.LstThread2.TabIndex = 1;
             this.LstThread2.UseCompatibleStateImageBehavior = false;
+            this.LstThread2.Visible = false;
             // 
             // lstThread1
             // 
@@ -66,6 +69,7 @@ namespace Multi_thread_Visual
             this.lstThread1.Size = new System.Drawing.Size(259, 329);
             this.lstThread1.TabIndex = 2;
             this.lstThread1.UseCompatibleStateImageBehavior = false;
+            this.lstThread1.Visible = false;
             // 
             // label1
             // 
@@ -113,6 +117,7 @@ namespace Multi_thread_Visual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(793, 468);
             this.Controls.Add(this.btnBacktoMenu);
             this.Controls.Add(this.label3);
