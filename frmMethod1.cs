@@ -38,6 +38,8 @@ namespace Multi_thread_Visual
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            lstThread1.Visible = true;
+            LstThread2.Visible = true; 
             Thread Operation1 = new Thread(new ThreadStart(Op1));
             Thread Operation2 = new Thread(new ThreadStart(Op2));
             Operation1.Start();

@@ -114,11 +114,12 @@ namespace Multi_thread_Visual
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Sitka Display", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(82, 77);
+            this.label3.Location = new System.Drawing.Point(67, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 74);
             this.label3.TabIndex = 7;
             this.label3.Text = "NOTE: This process can take\r\na few sec cause in total it takes\r\n6 billion runs ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Method_3
             // 
